@@ -13,6 +13,8 @@ require_once('UKM/Autoloader.php');
 
 if( UKM_HOSTNAME == 'ukm.dev' ) {
     ini_set('display_errors',true);
+} else {
+    ini_set('display_errors',false);
 }
 
 /**
