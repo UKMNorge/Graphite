@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^([0-9]{2})/([a-zA-Z_-]+)/? index.php?YEAR=$1&FILE=$2 [L]

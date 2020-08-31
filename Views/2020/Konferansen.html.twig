@@ -1,0 +1,86 @@
+{% extends "Excel:_layout.html.twig"|UKMpath %}
+
+{% block content %}
+	<div class="jumbotron">
+		<div class="container">
+			<div class="col-12">
+				<h2 class="display-4 mb-2 mt-3 pl-1">UKM-festivalen 2018</h2>
+				<h1 class="display-1 my-3">Deltakervurdering</h1>
+				<p class="lead pl-1">{{ data.num_rows }} personer har svart på undersøkelsen.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'C', kunSvar: false, multipleChoice: true} %}
+		
+		{% include "Excel:row-header.html.twig"|UKMpath with {header: 'UKM Norges viktigste roller'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'G'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'H'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'I'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'J'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'K'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'L'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'M'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'N'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'O'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'P'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'Q'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'R'} %}
+
+		{% include "Excel:row-header.html.twig"|UKMpath with {header: 'Strategiplan'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AH'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AI'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AJ'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AK'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AL'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AM'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AN'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AO'} %}
+
+		{% include "Excel:row-header.html.twig"|UKMpath with {header: 'Respondenten'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AP'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AR'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AS'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AU'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AV'} %}
+
+		{% include "Excel:row-header.html.twig"|UKMpath with {header: 'Respondenten og arbeidsgiver'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AU', header: 'Hvor stor stillingsprosent har du til UKM-arbeidet?'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AV', header: 'Deler du ansvaret for UKM med en kollega?'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AU', group: 'AP', header: 'Stillingsprosent i forhold til type'} %}
+
+		{% include "Excel:row-header.html.twig"|UKMpath with {header: 'Hva er dine planer for UKM framover'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'C', group: 'AT', multipleChoice: true, header: 'Fordelt på hvor respondenten er ansatt'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AS', group: 'C', multipleChoice: true, header: 'Fordelt på respondentens alder'} %}
+
+		{% include "Excel:row-header.html.twig"|UKMpath with {header: 'Hvem mener hva er viktig'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'G', header: 'Arrangere en årlig nasjonal UKM-festival'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'H', header: 'Bidra med stimuleringsmidler til lokale UKM'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'I', header: 'Drive med rådgiving i nettverket'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'J', header: 'Utvikle og drifte nettbaserte arrangørverktøy'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'K', header: 'Drive kulturfaglig utviklingsarbeid'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'L', header: 'Sørge for erfaringsdeling mellom lokalarrangørene'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'M', header: 'Arrangere konferanser og seminarer'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'N', header: 'Drive med lobby-virksomhet for bedre politisk forankring og økonomi'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'O', header: 'Drive nasjonal markedsføring og kommunikasjon for å gjøre UKM bedre kjent'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'P', header: 'Utvikle og drifte prosjekter sammen med andre organisasjoner'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'Q', header: 'Sette i gang internasjonale tiltak'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'R', header: 'Utarbeide samarbeidsavtaler med andre org.'} %}
+
+
+		{% include "Excel:row-header.html.twig"|UKMpath with {header: 'Hvem er enig i hva fra strategiplanen'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AH', header: 'Mangfold er UKMs eksistensgrunnlag, Deter når folk møtes, at forståelse skapes'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AI', header: 'Ungdom skal ha aktiv påvirkning og medbestemmelse i alle ledd i UKM'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AJ', header: 'UKM skal være en åpen arena også for nyeuttrykk og kulturaktiviteter som ikke har en plass i andre strukturer.'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AK', header: 'UKM må få en enda tydeligere ungdomsprofil, ikke være for «barnslig»'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AL', header: 'Ung Kultur Møtes for å bygge bro mellom mennesker, miljøer og kulturuttrykk.'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AM', header: 'UKM skal bidra positivt til FNs bærekraftsmål.'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AN', header: 'UKM skal preges av kvalitet gjennomtrygge, profesjonelle rammer.'} %}
+		{% include "Excel:row.html.twig"|UKMpath with {col: 'AT', group: 'AO', header: 'Ung Kultur Møtes for å gi ungdom en arena hvor de kan utvikle seg, skinne sterkere – og løfte kvaliteten på norsk kulturliv.'} %}
+
+		
+
+	</div>
+{% endblock %}

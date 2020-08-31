@@ -1,0 +1,9 @@
+{
+    "name": "ukmnorge/graphite",
+    "type": "project",
+    "description": "Gjør om excel-data til grafikk. Brukes for spørreundersøkelser.",
+    "minimum-stability": "dev",
+    "require": {
+        "ukmnorge/designvanilla": "dev-master"
+    }
+}
